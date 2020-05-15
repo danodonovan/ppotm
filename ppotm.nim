@@ -1,3 +1,6 @@
+import random
+import strformat
+
 var
   tips: seq[tuple[title: string, explanation: string]]
 
@@ -74,8 +77,6 @@ tips = @[
   ("Build Documentation In, Don't Bolt It On", "Documentation created separately from code is less likely to be correct and up to date."),
   ("Sign Your Work", "Craftsmen of an earlier age were proud to sign their work. You should be, too.")
 ]
-
-import random
 
 randomize()
 
