@@ -75,4 +75,10 @@ tips = @[
   ("Sign Your Work", "Craftsmen of an earlier age were proud to sign their work. You should be, too.")
 ]
 
-echo tips
+import random
+
+randomize()
+
+let tip = sample(tips)
+
+echo tip
