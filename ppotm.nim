@@ -82,4 +82,4 @@ randomize()
 
 let tip = sample(tips)
 
-echo &"*** {tip.title} ***\n... {tip.explanation}"
+echo &"\e[1;31m *** {tip.title} ***\e[00m\n\e[1;34m... {tip.explanation}\e[00m"
