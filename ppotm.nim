@@ -1,6 +1,17 @@
 import random
 import strformat
 
+type
+  Colors {.pure.} = enum
+    Black = "0;30", DarkGray = "1;30",
+    Red = "0;31", LightRed = "1;31",
+    Green = "0;32", LightGreen = "1;32",
+    Brown = "0;33", Yellow = "1;33",
+    Blue = "0;34", LightBlue = "1;34",
+    Purple ="0;35", LightPurple = "1;35",
+    Cyan = "0;36", LightCyan = "1;36",
+    LightGray = "0;37", White = "1;37"
+
 var
   tips: seq[tuple[title: string, explanation: string]]
 
@@ -82,4 +93,4 @@ randomize()
 
 let tip = sample(tips)
 
-echo &"*** {tip.title} ***\n... {tip.explanation}"
+echo &"\e[1;31m *** {tip.title} ***\e[00m\n\e[1;34m... {tip.explanation}\e[00m"
